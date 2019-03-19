@@ -21,17 +21,18 @@ const base = {
 	19: "matlaktli iwan chiknawi",
 };
 
-var potencias = [
-	{p: 20, t: "powalli"},
-	{p: 400, t: "tsontli"},
-	{p: 8000, t: "xikipilli"},
-	{p: 160000, t: ""},
-];
+
 
 function tlokenawake(num) {
 	let resto = num;
 	let paso = 0;
 	let retval = "";
+  var potencias = [
+	{p: 20, t: "powalli"},
+	{p: 400, t: "tsontli"},
+	{p: 8000, t: "xikipilli"},
+	{p: 160000, t: ""},
+];
 	do {
 		let pot;
 		while ((pot = potencias.pop()) != null) {
