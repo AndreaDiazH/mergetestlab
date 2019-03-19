@@ -37,10 +37,12 @@ function tlokenawake(num) {
 		while ((pot = potencias.pop()) != null) {
 			paso = parseInt(resto / pot.p);
 			if (paso > 0) {
-				retval += base[paso] + " iwan " + pot.t;
-				resto -= (resto % pot.p);
+				retval += base[paso] + pot.t + " iwan ";
+				resto -= (pot.p * paso);
 			}
 		}
+		if (resto != 0) retval += base[resto];
+		resto = 0;
 	} while (resto > 0);
 	document.getElementById("res").innerHTML = retval;
 }
